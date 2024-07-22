@@ -54,7 +54,11 @@ namespace WhatsappBusiness.CloudApi.Messages.Requests
         public string Type { get; set; }
 
         [JsonProperty("image", NullValueHandling = NullValueHandling.Ignore)]
-        public InteractiveMessageImage Image { get; set; }
+        public InteractiveMessageImage Image { get; set; }    
+        
+        
+        [JsonProperty("video", NullValueHandling = NullValueHandling.Ignore)]
+        public InteractiveMessageVideo Video { get; set; }
 
         [JsonProperty("text", NullValueHandling = NullValueHandling.Ignore)]
         public string Text { get; set; }
@@ -121,6 +125,13 @@ namespace WhatsappBusiness.CloudApi.Messages.Requests
 
         [JsonProperty("caption")]
         public string Caption { get; set; }
+    }
+
+    public class InteractiveMessageVideo
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
+
     }
 
     public class InteractiveMessageDocument
